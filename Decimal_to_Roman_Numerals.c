@@ -75,7 +75,7 @@ int counter (int decimal)
 void builder(char *output,int length, int input)
 {
     int i=0;
-    while (input>=1000)//we must first determine the size of our output string
+    while (input>=1000)
     {
         input-=1000;
         *(output+i)='M';
@@ -170,7 +170,7 @@ void builder(char *output,int length, int input)
 
 int main() {
     int length, i, input;
-    printf("Enter a number, and the program will convert to Roman numeral\n");
+    printf("Enter a number less than 4000, and the program will convert to Roman numeral\n");
     scanf("%d", &input);
     length = counter(input);
     char output[length + 1];  // Allocate enough space for the output string
